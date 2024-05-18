@@ -3,12 +3,18 @@
 #include "register_types.h"
 
 #include "carcassonne.hpp"
-#include "core/class_db.h"
+#include "core/object/class_db.h"
 
-void register_carcassonne_types() {
+void initialize_carcassonne_module(ModuleInitializationLevel p_level) {
+	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
+			return;
+	}
 	ClassDB::register_class<Carcassonne>();
 }
 
-void unregister_carcassonne_types() {
+void uninitialize_carcassonne_module(ModuleInitializationLevel p_level) {
+	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
+			return;
+	}
 	// Nothing to do here in this example.
 }

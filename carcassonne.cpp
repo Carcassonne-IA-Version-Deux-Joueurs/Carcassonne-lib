@@ -1,5 +1,4 @@
 #include "carcassonne.hpp"
-#include "core/class_db.h"
 
 Joueur *Carcassonne::get_joueur(int joueur_id) {
 	if (joueur_id == 1) {

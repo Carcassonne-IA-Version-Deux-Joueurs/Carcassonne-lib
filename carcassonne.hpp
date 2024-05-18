@@ -12,16 +12,15 @@
 #include <utility>
 #include <vector>
 
-#include "core/dictionary.h"
-#include "core/reference.h"
-#include "core/array.h"
-#include "core/class_db.h"
-#include "core/dictionary.h"
+#include "core/variant/dictionary.h"
+#include "core/object/ref_counted.h"
+#include "core/variant/array.h"
+#include "core/object/class_db.h"
 #include "core/math/vector2.h"
 
-class Carcassonne : public Reference {
+class Carcassonne : public RefCounted {
     /* API GODOT */
-    GDCLASS(Carcassonne, Reference);
+    GDCLASS(Carcassonne, RefCounted);
 
     /* Variables */
     Plateau plateau;
